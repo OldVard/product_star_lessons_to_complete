@@ -7,7 +7,7 @@ public class Main {
     static String line = """
                 Для выполнения первого задания напишите
                 строки кода, которые рассчитывают
-                количество букв и функцию вывода результата (количества).
+                количество букв и функцию вывода результата (количества). ееее
                 """;
     // подходящий
     static String number1 = "88005553535";
@@ -15,7 +15,7 @@ public class Main {
     static String number2 = "68005553535";
 
     public static void main(String[] args) {
-        printLine("Кол-во символов: %d\n", countAllSymbols("е"));
+        countSymbolInEachWord((char) 1077);
         System.out.println("-------------------");
         printLine("Номер подходит? %s\n", isNumberMatchesFormat(number1));
         System.out.println("-------------------");
@@ -23,9 +23,20 @@ public class Main {
         deleteAllLettersAndSpaces();
     }
 
-    // ex 1 (удаляем все совпадения, разница между исходным и настоящим - кол-во вхождений)
-    public static int countAllSymbols(String symbol) {
-        return line.length() - line.toLowerCase().replaceAll(symbol, "").length();
+    public static void countSymbolInEachWord(char symbol) {
+        String[] words = line.split("\\s+");
+
+        for(String word : words) {
+            // Очищаем от знаков препинания (только буквы и цифры).
+            // Не влияет на подсчет, но выглядит чище
+            String cleanedWord = word.replaceAll("[^а-я`А-ЯЁ]", "").toLowerCase();
+
+            long count = cleanedWord.toLowerCase().chars()
+                    .filter(ch -> ch == symbol)
+                    .count();
+
+            System.out.printf("Слово: [%s] кол-во '%c' --> %d\n", cleanedWord, symbol, count);
+        }
     }
 
     // ex 2
