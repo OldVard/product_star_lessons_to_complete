@@ -27,8 +27,11 @@ public class SemesterAssessment implements Examination {
     @Override
     public Double getAverageForSubject(String subject) {
         return scores.values().stream()
-                .flatMap(List::stream)
-                .filter(s -> s.getSubject().equals(subject))
+                .map(scoreList -> scoreList.stream()
+                        .filter(s -> s.getSubject().equals(subject))
+                        .reduce((first, second) -> second)
+                        .orElse(null))
+                .filter(Objects::nonNull)
                 .mapToInt(Score::getScore)
                 .average()
                 .orElse(0.0);

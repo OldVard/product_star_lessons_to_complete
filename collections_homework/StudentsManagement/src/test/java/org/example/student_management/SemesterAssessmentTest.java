@@ -48,12 +48,14 @@ class SemesterAssessmentTest {
 
     @Test
     void getAverageForSubject() {
-        Score score = new Score("Alya","math",5);
+        Score score = new Score("Alya","math",3);
+        Score score11 = new Score("Alya","math",5);
         Score score1 = new Score("Dane","rus",5);
         Score score2 = new Score("Marty","math",4);
         Score score3 = new Score("Logan","math",3);
 
         examination.addScore(score);
+        examination.addScore(score11);
         examination.addScore(score1);
         examination.addScore(score2);
         examination.addScore(score3);
@@ -61,6 +63,11 @@ class SemesterAssessmentTest {
         Double average = examination.getAverageForSubject("math");
 
         Assertions.assertEquals(4.0, average);
+
+        Score score4 = new Score("Sponge","math",3);
+        examination.addScore(score4);
+
+        Assertions.assertEquals(3.75, examination.getAverageForSubject("math"));
     }
 
     @Test
