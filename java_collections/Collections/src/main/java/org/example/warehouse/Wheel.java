@@ -1,8 +1,8 @@
-package warehouse;
+package org.example.warehouse;
 
 import java.util.Objects;
 
-public class Wheel {
+public final class Wheel {
     private final String id;
     private final String model;
     private final String category;
@@ -38,10 +38,10 @@ public class Wheel {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if(o == this) return true;
-        if(o == null || o.getClass() != this.getClass()) return false;
-        var that = (Wheel) o;
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (obj == null || obj.getClass() != this.getClass()) return false;
+        var that = (Wheel) obj;
         return Objects.equals(this.id, that.id) &&
                 Objects.equals(this.model, that.model) &&
                 Objects.equals(this.category, that.category) &&
@@ -56,12 +56,12 @@ public class Wheel {
 
     @Override
     public String toString() {
-        return "Wheel{" +
-                "id='" + id + '\'' +
-                ", model='" + model + '\'' +
-                ", category='" + category + '\'' +
-                ", place='" + place + '\'' +
-                ", quantity=" + quantity +
-                '}';
+        return "Wheel[" +
+                "id=" + id + ", " +
+                "model=" + model + ", " +
+                "category=" + category + ", " +
+                "place=" + place + ", " +
+                "quantity=" + quantity + ']';
     }
+
 }

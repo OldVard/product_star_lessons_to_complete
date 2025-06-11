@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0486daa4-b5a7-46ea-8786-c4b7f7a69071" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/main/java/org/example/student_management/Analytics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/main/java/org/example/student_management/Examination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/main/java/org/example/student_management/Score.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/main/java/org/example/student_management/SemesterAssessment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/main/java/org/example/student_management/SimpleCachedAnalytics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/test/java/org/example/student_management/SemesterAssessmentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/test/java/org/example/student_management/SimpleCachedAnalyticsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/Analytics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/BasicAnalytics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/CachedAnalytics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/InMemoryStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/Storage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/Wheel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/exceptionHandling/ItemNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/warehouse/BasicAnalyticsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/warehouse/CachedAnalyticsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/warehouse/InMemoryStorageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/warehouse/UserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/wheels.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Collections.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warehouse/InMemoryStorage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warehouse/Storage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warehouse/Wheel.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2yGLO2Xw7HUtpEzK9aDdvhrCrT3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.BasicAnalyticsTest.getAggregationByCategoryAndPlace.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BasicAnalyticsTest.getCategories.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BasicAnalyticsTest.getTotalCount.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CachedAnalyticsTest.callManyTimesForRepeatingRequests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CachedAnalyticsTest.callOnceForRepeatingRequests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InMemoryStorageTest.addListOfItems.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.InMemoryStorageTest.containsItem.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InMemoryStorageTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InMemoryStorageTest.getAllItems.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InMemoryStorageTest.getAllItemsSortedByModel.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InMemoryStorageTest.getAllSortedByModel.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InMemoryStorageTest.getItem.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InMemoryStorageTest.putAndGetItem.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InMemoryStorageTest.removeItem.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.buldUploadFromCsv.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.getAllModelsSorted.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alvar/JavaProjects/java/collections_homework/students&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.warehouse" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alvar\product_star_lessons\java_collections\Collections\src\test\resources" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.warehouse" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserTest.buldUploadFromCsv">
+    <configuration name="BasicAnalyticsTest.getAggregationByCategoryAndPlace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.warehouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.warehouse" />
+      <option name="MAIN_CLASS_NAME" value="org.example.warehouse.BasicAnalyticsTest" />
+      <option name="METHOD_NAME" value="getAggregationByCategoryAndPlace" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CachedAnalyticsTest.callManyTimesForRepeatingRequests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.warehouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.warehouse" />
+      <option name="MAIN_CLASS_NAME" value="org.example.warehouse.CachedAnalyticsTest" />
+      <option name="METHOD_NAME" value="callManyTimesForRepeatingRequests" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CachedAnalyticsTest.callOnceForRepeatingRequests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.warehouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.warehouse" />
+      <option name="MAIN_CLASS_NAME" value="org.example.warehouse.CachedAnalyticsTest" />
+      <option name="METHOD_NAME" value="callOnceForRepeatingRequests" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.buldUploadFromCsv" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.warehouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.warehouse" />
+      <option name="MAIN_CLASS_NAME" value="org.example.warehouse.UserTest" />
+      <option name="METHOD_NAME" value="buldUploadFromCsv" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.getAllModelsSorted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.warehouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.warehouse" />
+      <option name="MAIN_CLASS_NAME" value="org.example.warehouse.UserTest" />
+      <option name="METHOD_NAME" value="getAllModelsSorted" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserTest.buldUploadFromCsv" />
+        <item itemvalue="JUnit.UserTest.getAllModelsSorted" />
+        <item itemvalue="JUnit.CachedAnalyticsTest.callManyTimesForRepeatingRequests" />
+        <item itemvalue="JUnit.CachedAnalyticsTest.callOnceForRepeatingRequests" />
+        <item itemvalue="JUnit.BasicAnalyticsTest.getAggregationByCategoryAndPlace" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0486daa4-b5a7-46ea-8786-c4b7f7a69071" name="Changes" comment="" />
+      <created>1749455929840</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749455929840</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+</project>
