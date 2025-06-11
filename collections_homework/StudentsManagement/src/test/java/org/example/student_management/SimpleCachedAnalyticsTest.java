@@ -15,12 +15,12 @@ class SimpleCachedAnalyticsTest {
     @Test
     void callOnceForAverageMarkForSubject() {
 
-        Double averageBySubject = cached.getAverageMarkForSubject("math");
-        cached.getAverageMarkForSubject("math");
-        cached.getAverageMarkForSubject("math");
-        cached.getAverageMarkForSubject("math");
-        cached.getAverageMarkForSubject("math");
-        cached.getAverageMarkForSubject("math");
+        Double averageBySubject = cached.getAverageMarkForSubject("математика");
+        cached.getAverageMarkForSubject("математика");
+        cached.getAverageMarkForSubject("математика");
+        cached.getAverageMarkForSubject("математика");
+        cached.getAverageMarkForSubject("математика");
+        cached.getAverageMarkForSubject("математика");
 
         Assertions.assertEquals(4.4, averageBySubject);
         Assertions.assertEquals(1, examination.calls);
@@ -29,15 +29,15 @@ class SimpleCachedAnalyticsTest {
     @Test
     void callManyTimesForAverageMarkForSubject() {
 
-        cached.getAverageMarkForSubject("math");
-        cached.getAverageMarkForSubject("rus");
-        cached.getAverageMarkForSubject("rus");
-        cached.getAverageMarkForSubject("math");
-        cached.getAverageMarkForSubject("math");
+        cached.getAverageMarkForSubject("математика");
+        cached.getAverageMarkForSubject("русский язык");
+        cached.getAverageMarkForSubject("русский язык");
+        cached.getAverageMarkForSubject("математика");
+        cached.getAverageMarkForSubject("математика");
         
         Assertions.assertEquals(2, examination.calls);
 
-        cached.getAverageMarkForSubject("pe");
+        cached.getAverageMarkForSubject("физ-ра");
 
         Assertions.assertEquals(3, examination.calls);
     }
@@ -58,13 +58,13 @@ class SimpleCachedAnalyticsTest {
         @Override
         public Double getAverageForSubject(String subject) {
             calls++;
-            Score score = new Score("Alya", "math", 5);
-            Score score1 = new Score("Alya", "math", 4);
-            Score score2 = new Score("Dane", "rus", 5);
-            Score score3 = new Score("Marty", "math", 3);
-            Score score4 = new Score("Marty", "rus", 4);
-            Score score5 = new Score("Logan", "math", 5);
-            Score score6 = new Score("Logan", "math", 5);
+            Score score = new Score("Сарк Аля", "математика", 5);
+            Score score1 = new Score("Сарк Аля", "математика", 4);
+            Score score2 = new Score("Абвгдеев Данил", "русский язык", 5);
+            Score score3 = new Score("Марков Марк", "математика", 3);
+            Score score4 = new Score("Марков Марк", "русский язык", 4);
+            Score score5 = new Score("Белых Леон", "математика", 5);
+            Score score6 = new Score("Белых Леон", "математика", 5);
 
             List<Score> scores = List.of(score, score1, score2, score3, score4, score5, score6);
 
