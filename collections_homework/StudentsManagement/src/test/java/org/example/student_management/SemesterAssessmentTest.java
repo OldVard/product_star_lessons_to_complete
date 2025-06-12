@@ -26,6 +26,10 @@ class SemesterAssessmentTest {
 
         Score score1 = examination.getScore("Аля Сарк", "математика");
         Assertions.assertEquals(score, score1);
+
+        Assertions.assertThrows(IllegalArgumentException.class, () ->
+                examination.addScore(new Score(new StudentKey("Валерия", "Сушенко"),
+                        new Subject("математика"), 1)));
     }
 
     @Test
