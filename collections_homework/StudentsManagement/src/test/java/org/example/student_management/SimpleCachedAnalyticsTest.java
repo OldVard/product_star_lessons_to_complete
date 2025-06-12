@@ -42,9 +42,14 @@ class SimpleCachedAnalyticsTest {
 
     @Test
     void testCache() {
-        cached.getAverageMarkForSubject("математика"); // кэшируем
-        cached.invalidateSubject("математика");       // инвалидируем
+        cached.getAverageMarkForSubject("математика");
+        cached.getAverageMarkForSubject("математика");
+        Assertions.assertEquals(1, examination.calls);
+
+        examination.addScore(new Score(new StudentKey("Данил", "Абвгдеев"), new Subject("математика"), 3));
         cached.getAverageMarkForSubject("математика"); // пересчёт
+        cached.getAverageMarkForSubject("математика");
+        cached.getAverageMarkForSubject("математика");
 
         Assertions.assertEquals(2, examination.calls);
     }
@@ -55,7 +60,6 @@ class SimpleCachedAnalyticsTest {
         @Override
         public void addScore(Score score) {
             cached.invalidateSubject(score.getSubject().name());
-            examination.addScore(score);
         }
 
         @Override
