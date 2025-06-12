@@ -3,14 +3,12 @@ package org.example.student_management;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 class SimpleCachedAnalyticsTest {
 
     private final MockSemesterAssessment examination = new MockSemesterAssessment();
-    private final Analytics cached = new SimpleCachedAnalytics(examination);
+    private final SimpleCachedAnalytics cached = new SimpleCachedAnalytics(examination);
 
     @Test
     void callOnceForAverageMarkForSubject() {
@@ -22,7 +20,7 @@ class SimpleCachedAnalyticsTest {
         cached.getAverageMarkForSubject("математика");
         cached.getAverageMarkForSubject("математика");
 
-        Assertions.assertEquals(4.4, averageBySubject);
+        Assertions.assertEquals(4.333333, averageBySubject, 0.0001);
         Assertions.assertEquals(1, examination.calls);
     }
 
@@ -34,7 +32,7 @@ class SimpleCachedAnalyticsTest {
         cached.getAverageMarkForSubject("русский язык");
         cached.getAverageMarkForSubject("математика");
         cached.getAverageMarkForSubject("математика");
-        
+
         Assertions.assertEquals(2, examination.calls);
 
         cached.getAverageMarkForSubject("физ-ра");
@@ -42,12 +40,22 @@ class SimpleCachedAnalyticsTest {
         Assertions.assertEquals(3, examination.calls);
     }
 
+    @Test
+    void testCache() {
+        cached.getAverageMarkForSubject("математика"); // кэшируем
+        cached.invalidateSubject("математика");       // инвалидируем
+        cached.getAverageMarkForSubject("математика"); // пересчёт
+
+        Assertions.assertEquals(2, examination.calls);
+    }
+
     private class MockSemesterAssessment implements Examination {
         private int calls = 0;
 
         @Override
         public void addScore(Score score) {
-
+            examination.addScore(score);
+            cached.invalidateSubject(score.getSubject().name());
         }
 
         @Override
@@ -58,18 +66,29 @@ class SimpleCachedAnalyticsTest {
         @Override
         public Double getAverageForSubject(String subject) {
             calls++;
-            Score score = new Score("Сарк Аля", "математика", 5);
-            Score score1 = new Score("Сарк Аля", "математика", 4);
-            Score score2 = new Score("Абвгдеев Данил", "русский язык", 5);
-            Score score3 = new Score("Марков Марк", "математика", 3);
-            Score score4 = new Score("Марков Марк", "русский язык", 4);
-            Score score5 = new Score("Белых Леон", "математика", 5);
-            Score score6 = new Score("Белых Леон", "математика", 5);
 
-            List<Score> scores = List.of(score, score1, score2, score3, score4, score5, score6);
+            Subject sub = new Subject(subject);
 
-            return scores.stream()
-                    .filter(s -> s.getSubject().equals(subject))
+            List<Score> scores = List.of(
+                    new Score(new StudentKey("Аля", "Сарк"), new Subject("математика"), 4),
+                    new Score(new StudentKey("Аля", "Сарк"), new Subject("математика"), 5),
+                    new Score(new StudentKey("Данил", "Абвгдеев"), new Subject("русский язык"), 5),
+                    new Score(new StudentKey("Марк", "Марков"), new Subject("математика"), 3),
+                    new Score(new StudentKey("Марк", "Марков"), new Subject("математика"), 3),
+                    new Score(new StudentKey("Леон", "Белых"), new Subject("математика"), 5),
+                    new Score(new StudentKey("Леон", "Белых"), new Subject("математика"), 5)
+            );
+
+            // Используем LinkedHashMap для сохранения порядка вставки
+            Map<StudentKey, Score> lastSubmissions = new LinkedHashMap<>();
+
+            for (Score score : scores) {
+                if (score.getSubject().equals(sub)) {
+                    lastSubmissions.put(score.student(), score); // последняя перезапишет предыдущую
+                }
+            }
+
+            return lastSubmissions.values().stream()
                     .mapToDouble(Score::getScore)
                     .average()
                     .orElse(0.0);

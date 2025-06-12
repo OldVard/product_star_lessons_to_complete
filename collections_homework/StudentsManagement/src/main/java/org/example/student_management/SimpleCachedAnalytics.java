@@ -16,6 +16,10 @@ public class SimpleCachedAnalytics implements Analytics {
     public Double getAverageMarkForSubject(String subject) {
         return markCache.computeIfAbsent(subject, examination::getAverageForSubject);
     }
+
+    public void invalidateSubject(String subject) {
+        markCache.invalidate(subject);
+    }
 }
 
 class AverageMarkCache<K, V> extends LinkedHashMap<K, V> {
@@ -29,5 +33,9 @@ class AverageMarkCache<K, V> extends LinkedHashMap<K, V> {
     @Override
     protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
         return size() > capacity;
+    }
+
+    public void invalidate(K key) {
+        this.remove(key);
     }
 }
