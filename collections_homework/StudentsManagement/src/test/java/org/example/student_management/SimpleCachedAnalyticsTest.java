@@ -54,8 +54,8 @@ class SimpleCachedAnalyticsTest {
 
         @Override
         public void addScore(Score score) {
-            examination.addScore(score);
             cached.invalidateSubject(score.getSubject().name());
+            examination.addScore(score);
         }
 
         @Override
