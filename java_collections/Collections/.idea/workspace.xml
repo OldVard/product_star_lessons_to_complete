@@ -5,40 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0486daa4-b5a7-46ea-8786-c4b7f7a69071" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/main/java/org/example/student_management/Analytics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/main/java/org/example/student_management/Examination.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/main/java/org/example/student_management/Score.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/main/java/org/example/student_management/SemesterAssessment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/main/java/org/example/student_management/SimpleCachedAnalytics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/test/java/org/example/student_management/SemesterAssessmentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections_homework/StudentsManagement/src/test/java/org/example/student_management/SimpleCachedAnalyticsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/Analytics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/BasicAnalytics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/CachedAnalytics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/InMemoryStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/Storage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/Wheel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/warehouse/exceptionHandling/ItemNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/warehouse/BasicAnalyticsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/warehouse/CachedAnalyticsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/warehouse/InMemoryStorageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/warehouse/UserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/wheels.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collections.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehouse/InMemoryStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehouse/Storage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehouse/Wheel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +54,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;redo&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/alvar/JavaProjects/java/collections_homework/students&quot;
