@@ -11,7 +11,6 @@ public class Task {
     private Integer id;
     private String title;
     private boolean finished;
-    @JsonFormat(pattern = "yyy-MM-dd HH:mm:ss")
     private LocalDateTime creationDate;
 
     public Task(String title, boolean finished, LocalDateTime time) {
