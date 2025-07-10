@@ -15,14 +15,21 @@ public class CompetitionManagerMain {
 
         ResultProcessor resultProcessor = context.getBean(ResultProcessor.class);
 
+        System.out.println("[ВСЕ УЧАСТНИКИ]");
+        printCompetitors(resultProcessor.getAllCompetitors());
+
+        System.out.println("---------------------------");
+        System.out.println("[САМЫЕ БЫСТРЫЕ МУЖЧИНЫ (10 км)]");
         List<Competitor> results = resultProcessor.getNFastestCompetitors("10 км", "М", 2);
         printCompetitors(results);
 
         System.out.println("---------------------------");
+        System.out.println("[САМЫЕ БЫСТРЫЕ ЖЕНЩИНЫ (10 км)]");
         List<Competitor> results2 = resultProcessor.getNFastestCompetitors("10 км", "Ж", 2);
         printCompetitors(results2); // вернет 1
 
         System.out.println("---------------------------");
+        System.out.println("[САМЫЕ БЫСТРЫЕ ЖЕНЩИНЫ (5 км)]");
         List<Competitor> results3 = resultProcessor.getNFastestCompetitors("5 км", "Ж", 2);
         printCompetitors(results3);
     }
