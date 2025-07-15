@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             version="2.0">
+    <portlet>
+        <portlet-name>SimplePortlet</portlet-name>
+        <display-name>Простой портлет</display-name>
+        <portlet-class>ru.productstar.servlets.portlets.SimplePortlet</portlet-class>
+        <init-param>
+            <name>exampleParam</name>
+            <value>exampleValue</value>
+        </init-param>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <portlet-info>
+            <title>Simple Portlet</title>
+        </portlet-info>
+    </portlet>
+</portlet-app>
