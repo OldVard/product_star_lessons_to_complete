@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new game</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-container">
+            <h1>Добавить игру</h1>
+
+            <form action="/games/create" method="post" class="create-form">
+                <input type="text" id="game-name" name="title" placeholder="Название игры" required>
+                <label for="game-genres">Жанры</label>
+                <input type="text" id="game-genres" name="genres" placeholder="Жанры (через запятую)" required>
+                <label for="game-size">Размер</label>
+                <input type="text" id="game-size" name="size" placeholder="Размер игры" min="0" required>
+                <label for="game-category">Категория</label>
+                <input type="text" id="game-category" name="category" placeholder="(RPG, Action, etc.)" required>
+                <label for="game-status">Статус</label>
+                <select name="status" id="game-status">
+                    <option value="НЕ ПРИОБРЕТЕНО" selected>НЕ ПРИОБРЕТЕНО</option>
+                    <option value="ПРИОБРЕТЕНО">ПРИОБРЕТЕНО</option>
+                </select>
+                <div class="button-wrapper">
+                    <button type="submit" class="create-button">Добавить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+:root {
+    --main-color: #292929;
+    --secondary-color: #333;
+    --accent-color: #6973ff7c;
+    --edit-color: #ff9d6d;
+    --delete-color: #ff6d6d;
+    --create-color: #6973ff;
+    --box-shadow: 0 2px 16px #6973ff;
+    --box-shadow-2: 0 2px 16px #ff9e6d5d;
+    --table-box-shadow: 0 2px 16px rgba(0, 0, 0, 0.7);
+    --table-color: #333;
+    --row-color: #4c4c4c;
+    --row-text-color: #fff;
+    --edit-delete-hover: #333;
+    --selection-bg-color: #6973ff;
+    --selection-text-color: #fff;
+    --create-button: #ff8c53;
+    --create-button-hover: #ffa578;
+    --status-color: #42d200;
+}
+
+::selection {
+    background-color: var(--selection-bg-color);
+    color: var(--selection-text-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--main-color);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    /* justify-content: space-evenly; */
+    max-width: 100%;
+}
+
+.table-container {
+    width: 75%;
+    padding: 0.5rem 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    color: var(--row-text-color);
+    box-shadow: var(--table-box-shadow);
+}
+
+table caption {
+    text-align: left;
+    margin-bottom: 1rem;
+    color: var(--row-text-color);
+    font-size: 1.7rem;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+table thead th {
+    background-color: var(--row-color);
+    color: var(--row-text-color);
+    padding: 1.3rem 1.3rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+table tbody td {
+    padding: 1.2rem 1.3rem;
+    text-align: left;
+    border: none;
+    font-size: 1rem;
+}
+
+table tbody tr {
+    cursor: pointer;
+}
+
+.book-title::before {
+    content: "«";
+}
+.book-title::after {
+    content: "»";
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.edit {
+    padding: 0.5rem 1rem;
+    color: var(--edit-color);
+    text-align: center;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+.delete {
+    padding: 0.5rem 1rem;
+    color: var(--delete-color);
+    text-align: center;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+table tbody td a:first-child:hover {
+    text-decoration: underline;
+}
+
+table tbody td:nth-child(5) {
+    color: var(--status-color);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--row-color);
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
+
+table tbody tr {
+    transition: 0.2s;
+}
+
+table tbody tr:hover {
+    background-color: var(--accent-color);
+}
+
+.creation {
+    max-width: 100%;
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: end;
+}
+
+.create {
+    /* position: absolute; */
+    /* margin-top: 2.6rem; */
+    background-color: var(--secondary-color);
+    padding: 0.8rem 1.3rem;
+    border-radius: 10px;
+    color: var(--row-text-color);
+    box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--create-color);
+    transition: background-color 0.2s;
+}
+
+.create:hover {
+    background-color: var(--row-color);
+}
+
+
+/* Create form */
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 5rem 2rem;
+}
+
+.main h1 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--row-text-color);
+}
+
+.main-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-form {
+    width: 40%;
+    color: var(--row-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1rem;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--create-color);
+    box-shadow: var(--table-box-shadow);
+}
+
+.create-form label {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.create-form label:first-child {
+    margin-top: 0;
+}
+
+.create-form input {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--row-color);
+    color: var(--row-text-color);
+    font-size: 0.9rem;
+}
+
+.create-form input:focus {
+    outline: none;
+    border-left: 4px solid var(--create-button);
+}
+
+.create-form select {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--row-color);
+    color: var(--row-text-color);
+}
+
+.button-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-button {
+    width: 80%;
+    background-color: var(--create-button);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    color: var(--row-text-color);
+    box-shadow: var(--box-shadow-2);
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+.create-button:hover {
+    background-color: var(--create-button-hover);
+}
+
+.main h1 span::before {
+    content: "«";
+}
+
+.main h1 span::after {
+    content: "»";
+}
+

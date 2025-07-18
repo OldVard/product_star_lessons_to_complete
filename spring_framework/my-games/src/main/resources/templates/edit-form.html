@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit game</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-container">
+            <h1>Редактировать игру: <span th:text="${game.title}"></span></h1>
+
+            <form action="/games/update" method="post" class="create-form">
+                <input type="text" name="id" th:value="${game.id}" hidden>
+                <label for="game-name">Название</label>
+                <input type="text" id="game-name" name="title" placeholder="Название игры" required
+                    th:value="${game.title}">
+                    
+                <label for="game-genres">Жанры</label>
+                <input type="text" id="game-genres" name="genres" placeholder="Жанры (через запятую)" required
+                    th:value="${#strings.replace(game.genres.toString(), '[', '').replace(']', '')}" />
+
+                <label for="game-size">Размер</label>
+                <input type="text" id="game-size" name="size" placeholder="Размер игры" min="0" required
+                    th:value="${game.size}">
+
+                <label for="game-category">Категория</label>
+                <input type="text" id="game-category" name="category" placeholder="(RPG, Action, etc.)" required
+                    th:value="${game.category}">
+
+                <label for="game-status">Статус</label>
+                <select name="status" id="game-status">
+                    <option value="NOT_ACQUIRED" th:selected="${game.status == 'НЕ ПРИОБРЕТЕНО'}">НЕ ПРИОБРЕТЕНО
+                    </option>
+                    <option value="ACQUIRED" th:selected="${game.status == 'ПРИОБРЕТЕНО'}">ПРИОБРЕТЕНО</option>
+                </select>
+
+                <div class="button-wrapper">
+                    <button type="submit" class="create-button">Сохранить изменения</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<!-- <td>
+    <span th:each="genre, iterStat : ${game.genres}">
+      <span th:text="${genre}"></span><span th:if="${!iterStat.last}">, </span>
+    </span>
+  </td> -->
+
+</html>

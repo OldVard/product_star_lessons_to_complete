@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGames</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="creation">
+            <a th:href="@{'/games/create-form'}" class="create">Добавить игру <b>+</b></a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <caption>Игры: все</caption>
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Жанры</th>
+                        <th>Размер</th>
+                        <th>Категория</th>
+                        <th>Статус</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="game : ${games}">
+                        <td th:text="${game.title}" class="book-title"></td>
+                        <td>
+                            <span th:each="genre, iterStat : ${game.genres}">
+                                <span th:text="${genre}"></span><span th:if="${!iterStat.last}">, </span>
+                            </span>
+                        </td>
+                        <td th:text="${game.size}"></td>
+                        <td th:text="${game.category}"></td>
+                        <td th:text="${game.status}"></td>
+                        <td>
+                            <a th:href="@{'games/edit-form/' + ${game.id}}" class="edit">Редактировать</a>
+                        </td>
+                        <td>
+                            <a th:href="@{'games/delete/' + ${game.id}}" class="delete">Удалить</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
