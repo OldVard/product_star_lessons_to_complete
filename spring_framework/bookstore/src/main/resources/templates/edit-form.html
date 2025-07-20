@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit book</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-container">
+            <h1>Редактировать книгу: <span th:text="${book.name}"></span></h1>
+
+            <form action="/books/update" method="post" class="create-form">
+                <input type="text" name="id" th:value="${book.id}" hidden>
+                <label for="book-name">Название</label>
+                <input type="text" id="book-name" name="name" placeholder="Название книги" required th:value="${book.name}">
+                <label for="book-author">Автор</label>
+                <input type="text" id="book-author" name="author" placeholder="Полное имя" required th:value="${book.author}">
+                <label for="book-pages">Количество страниц</label>
+                <input type="number" id="book-pages" name="pages" placeholder="Количество страниц" min="1" required th:value="${book.pages}">
+
+                <div class="button-wrapper">
+                    <button type="submit" class="create-button">Сохранить изменения</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

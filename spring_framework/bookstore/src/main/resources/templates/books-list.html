@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="table-container">
+            <table>
+                <caption>Книги: все</caption>
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Автор</th>
+                        <th>Количество страниц</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="book : ${books}">
+                        <td th:text="${book.name}" class="book-title"></td>
+                        <td th:text="${book.author}"></td>
+                        <td th:text="${book.pages}"></td>
+                        <td>
+                            <a th:href="@{'books/edit-form/' + ${book.id}}" class="edit">Редактировать</a>
+                        </td>
+                        <td>
+                            <a th:href="@{'books/delete/' + ${book.id}}" class="delete">Удалить</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="creation">
+            <a th:href="@{'/books/create-form'}" class="create">Добавить книгу<b>+</b></a>
+            <!-- Одна ошибка и ты ошибся aka Лень Делать JS -->
+            <a th:href="@{'/books/delete-all'}" class="critical-delete"><span>🧹</span></a> 
+        </div>
+    </div>
+
+</body>
+
+</html>
