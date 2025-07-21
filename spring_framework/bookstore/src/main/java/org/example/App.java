@@ -27,6 +27,7 @@ public class App {
                 String sql = new String(is.readAllBytes());
                 try (Connection con = ds.getConnection();
                         Statement stat = con.createStatement()) {
+                    // Содается таблица И добавляются книги
                     stat.executeUpdate(sql);
 
                     // stat.executeUpdate(
