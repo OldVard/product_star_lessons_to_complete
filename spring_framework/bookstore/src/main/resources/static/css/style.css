@@ -5,6 +5,7 @@
     --edit-color: #ff9d6d;
     --delete-color: #ff6d6d;
     --create-color: #6973ff;
+    --create-color-box-shadow: 0 0px 10px #6973ff;
     --box-shadow: 0 2px 16px rgba(0, 0, 0, 0.7);
     --add-buttton-box-shadow: 0 2px 16px #6973ff;
     --critical-delete-box-shadow: 0 2px 16px #ff6d6d;
@@ -30,7 +31,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--main-color);
 }
 
@@ -87,6 +88,7 @@ table tbody tr {
 .book-title::before {
     content: "«";
 }
+
 .book-title::after {
     content: "»";
 }
@@ -166,7 +168,6 @@ table tbody tr:hover {
     justify-content: center;
     margin-top: 2.6rem;
     background-color: var(--secondary-color);
-    width: 10%;
     padding: 0.8rem 1.3rem;
     border-radius: 10px;
     color: var(--row-text-color);
@@ -174,10 +175,6 @@ table tbody tr:hover {
     box-shadow: var(--critical-delete-box-shadow);
     border-left: 4px solid var(--delete-color);
     transition: background-color 0.2s;
-}
-
-.critical-delete span {
-    /* font-size: 1.4rem; */
 }
 
 .create:hover {
@@ -192,6 +189,7 @@ table tbody tr:hover {
     .hero {
         flex-direction: column;
         align-items: center;
+        padding: 2rem 3rem;
     }
 
     .table-container {
@@ -227,8 +225,14 @@ table tbody tr:hover {
     color: var(--row-text-color);
 }
 
+.main span {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: var(--row-text-color);
+}
+
 .main-container {
-    width: 50%;
+    min-width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -236,7 +240,7 @@ table tbody tr:hover {
 }
 
 .create-form {
-    width: 40%;
+    width: 90%;
     color: var(--row-text-color);
     display: flex;
     flex-direction: column;
@@ -245,7 +249,7 @@ table tbody tr:hover {
     background-color: var(--secondary-color);
     padding: 2rem;
     border-radius: 10px;
-    border-left: 4px solid var(--create-color);
+    /* border-left: 4px solid var(--create-color); */
     box-shadow: var(--box-shadow);
 }
 
@@ -271,6 +275,7 @@ table tbody tr:hover {
 .create-form input:focus {
     outline: none;
     border-left: 4px solid var(--create-button);
+    box-shadow: var(--create-color-box-shadow);
 }
 
 .button-wrapper {
@@ -296,11 +301,10 @@ table tbody tr:hover {
     background-color: var(--create-button-hover);
 }
 
-.main h1 span::before {
+.main span::before {
     content: "«";
 }
 
-.main h1 span::after {
+.main span::after {
     content: "»";
 }
-

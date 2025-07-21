@@ -30,7 +30,8 @@ public class App {
                     stat.executeUpdate(sql);
 
                     // stat.executeUpdate(
-                    //         "insert into books (name, author, pages) values ('Американские боги', 'Нил Гейман', 702)");
+                    // "insert into books (name, author, pages) values ('Американские боги', 'Нил
+                    // Гейман', 702)");
 
                     System.out.println("----- [BOOKS] -----");
                     ResultSet rs = stat.executeQuery("select * from books");

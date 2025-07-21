@@ -41,9 +41,24 @@
         <div class="creation">
             <a th:href="@{'/books/create-form'}" class="create">Добавить книгу<b>+</b></a>
             <!-- Одна ошибка и ты ошибся aka Лень Делать JS -->
-            <a th:href="@{'/books/delete-all'}" class="critical-delete"><span>🧹</span></a> 
+            <a th:href="@{'/books/delete-all'}" class="critical-delete" id="delete-all">🧹</a>
         </div>
     </div>
+
+    <!-- JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteAllBtn = document.querySelector('.critical-delete');
+            if (deleteAllBtn) {
+                deleteAllBtn.addEventListener('click', function (event) {
+                    const confirmed = confirm('Вы действительно хотите удалить все книги? Это действие необратимо!');
+                    if (!confirmed) {
+                        event.preventDefault();
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 

@@ -11,7 +11,8 @@
 <body>
     <div class="main">
         <div class="main-container">
-            <h1>Редактировать книгу: <span th:text="${book.name}"></span></h1>
+            <h1>Редактировать книгу</h1>
+            <span th:text="${book.name}"></span>
 
             <form action="/books/update" method="post" class="create-form">
                 <input type="text" name="id" th:value="${book.id}" hidden>

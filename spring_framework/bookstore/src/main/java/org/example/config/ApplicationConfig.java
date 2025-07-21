@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ApplicationConfig {
 
+    // Настраиваем соединение с базой данных H2
     @Bean
     public DataSource h2DataSource(@Value("${jdbcUrl}") String jdbcUrl) {
         JdbcDataSource ds = new JdbcDataSource();
